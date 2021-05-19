@@ -1,0 +1,20 @@
+* {
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-text-decoration-color: none;
+          text-decoration-color: none;
+  text-decoration: none;
+  outline: none;
+  list-style-type: none;
+}
+
+.a {
+  text-decoration: none;
+}
+
+.header,
+.par {
+  padding: 0.75em;
+}
+/*# sourceMappingURL=style.css.map */
