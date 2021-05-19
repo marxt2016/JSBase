@@ -27,5 +27,5 @@ Order of execution is the same as listed in HTML file.
 Defer is applied when <script> has src, otherwise - ignored*/
 
 /*Async makes scripts executable when they are loaded, first loaded - first executed. Small scripts are executed earlier.
-Page contend is displayed immediately*/
+Page content is displayed immediately*/
 
