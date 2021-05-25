@@ -1,3 +1,4 @@
+'use strict'
 //Task1
 let tC = prompt("Enter temperature value in Celsius");
 let tF = (9 / 5) * tC + 32;
@@ -11,21 +12,50 @@ if (!isNaN(parseInt(tC))) {
 }
 
 //Task2
-let _admin = "Vasya";
-let _name = _admin;
-alert(_name);
+let _name = "Vasya";
+let _admin = _name;
+alert(_admin);
 
-/*Task3 - Plus can be used for math operation and for concat strings
-JS interpreter converts number(1000) to string and concatenates resulting a string*/
-console.log(typeof 1000);
-console.log(typeof "108");
-console.log(typeof (1000 + "108"));
+//Task3
+/*
+1. Складываем числа 10 и 10 получаем 20;
+2. Конкатенируем число 20 и строку "10" получаем строку "2010";
+3. Присваиваем строку "2010" в переменную result;
+4. Выводим переменную result в консоль, с помощью console.log();
+*/
+let result = 10 + 10 + "10";
+console.log(result);
 
-//Task4
-/*Defer makes script to download at the same time when HTML is parsed, script is executed after DOM is built, but before the event =DOMContentLoaded.
-Order of execution is the same as listed in HTML file.
-Defer is applied when <script> has src, otherwise - ignored*/
+/*
+1. Конкатенируем число 10 и строку "10" получаем строку "1010";
+2. Конкатенируем к строке "1010" число 10 и получаем строку "101010";
+3. Присваиваем строку "101010" в переменную result;
+4. Выводим переменную result в консоль, с помощью console.log();
+*/
+let result = 10 + "10" + 10;
+console.log(result);
 
-/*Async makes scripts executable when they are loaded, first loaded - first executed. Small scripts are executed earlier.
-Page content is displayed immediately*/
+/*
+1. Складываем числа 10 и 10 получаем 20;
+2. Складываем число 20 и приведенную к числу с помощью унарного плюса строку +"10" и получаем число 30;
+3. Присваиваем число 30 в переменную result;
+4. Выводим переменную result в консоль, с помощью console.log();
+*/
+let result = 10 + 10 + +"10";
+console.log(result);
 
+/*
+1. Делим число 10 на пустую строку приведенную к отрицательному нулю с помощью унарного минуса и получаем отрицательную бесконечность ;
+2. Присваиваем число отрицательной бесконечности в переменную result;
+3. Выводим переменную result в консоль, с помощью console.log();
+*/
+let result = 10 / -"";
+console.log(result);
+
+/*
+1. Делим число 10 на нечисловое значение, полученное в результате приведения строки к числу с помощью  унарного плюса и получаем нечисловое значение;
+2. Присваиваем нечисловое значение в переменную result;
+3. Выводим переменную result в консоль, с помощью console.log();
+*/
+let result = 10 / +"2,5";
+console.log(result);
