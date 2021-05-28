@@ -35,6 +35,13 @@ let x = 1 + (n *= 2); //ответ: 5
 
 
 //Задание 3
+/**
+ * Функция проверяет введенные цифры и совершает математические действия в зависимости от знака предоставленного числа
+ * arg1, arg2 – значения аргументов, 
+@param{arg1} arg1  - int number
+@param{arg2} arg2 - int number
+@returns result of arithmetic operation
+ */
 function numberActions(num1, num2) {
     let result = 0;
     if ((num1 >= 0) && (num2 >= 0)) {
@@ -47,39 +54,54 @@ function numberActions(num1, num2) {
     }
 }
 
+/**
+ * Функция проверяет введенные пользователем данные на пустой ввод, Null, Nan и возвращает true, если ввели число.
+ * input – данные запрошенные у пользователя,
+@param{input} arg1  - int number
+@returns true - если введенные данные это число.
+ */
 function chekInput(input) {
     let result = false;
     if (input == "") {
-        alert("Please provide some number")
-        return result = false;
+        alert("Empty input provided");
+        return;
     }
     if (input == null) {
-        alert("Please provide not null value")
-        return result = false;
+        alert("No value is given")
+        return;
     }
     if (isNaN(input)) {
-        alert("Please provide number")
-        return result = false;
+        alert("This is not a number");
+        return;
     }
     return result = true;
 }
 
+/**
+ * Функция просит ввести правильные данные до тех пор, пока условие не удовлетворено.
+ * input – данные запрошенные у пользователя,
+@returns n - возвращает число, полученное от пользователя.
+ */
 function askInput() {
-    let n = prompt("Please enter number");
-    if (!chekInput(n)) {
-        return;
+    let n;
+    let condition = true;
+    while (condition) {
+        n = prompt("Please enter number");
+        if (chekInput(n)) {
+            condition = false;
+        }
     }
     return n;
 }
 
+
 let n1 = askInput();
-if (n1) {
+if (!isNaN(n1)) {
     let n2 = askInput();
-    if (n2) {
+    if (!isNaN(n1)) {
         alert(numberActions(n1, n2));
     }
 }
-
 //Задание 4
 /**
  * основные 4 арифметические операции (+, -, /, *) в виде функций с двумя
