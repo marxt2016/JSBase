@@ -23,7 +23,7 @@ function defineEvenNumber() {
             console.log(i + " - четное число");
         }
     }
-}
+};
 
 defineEvenNumber();
 
@@ -80,9 +80,9 @@ const products = [
 
 /**
  Функция расчитывает новую цену с указанной скидкой
-@param{price} - int number
-@param{discount}  - int number
-@returns price - discount
+@param {number} price - int number
+@param {number} discount - int number
+@returns {number} price - discount
  */
 
 function calculatePrice(price, discount) {
