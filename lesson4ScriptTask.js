@@ -30,7 +30,7 @@ function Product1(name, price) {
 }
 Product1.prototype.make25PercentDiscount1 = function () {
     return this.price = 0.85 * this.price;
-}
+};
 const myProduct1 = new Product1("name1", 100);
 alert("Price with discount = " + myProduct1.make25PercentDiscount1());
 
@@ -53,16 +53,16 @@ function Post(author, text, date) {
     this.author = author;
     this.text = text;
     this.date = date;
-};
+}
 
 Post.prototype.edit = function (newtext) {
-    return this.text = newtext;
+    this.text = newtext;
 };
 
 function AttachedPost(author, text, date) {
     Post.call(this, author, text, date);
     this.highlighted = false;
-};
+}
 
 AttachedPost.prototype = Object.create(Post.prototype);
 AttachedPost.prototype.constructor = AttachedPost;
@@ -93,7 +93,7 @@ class Postes6 {
     };
 
     edites6(newtext) {
-        return this.text = newtext;
+        this.text = newtext;
     }
 }
 
@@ -108,7 +108,7 @@ class AttachedPostes6 extends Postes6 {
         this.highlighted = false;
     }
     makeTextHighlighted() {
-        return this.highlighted = true;
+        this.highlighted = true;
     }
 
 }
